@@ -3,6 +3,7 @@
 var express = require('express');
 var cors = require('cors');
 var app = express();
+var path = require('path');
 
 app.use(cors());
 
@@ -12,6 +13,8 @@ config = require('./config');
 //Load logger
 var logger = require('./logger');
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.all('/', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
@@ -20,7 +23,7 @@ app.all('/', function(req, res, next) {
     });
 });
 
-app.get('/graph', function isReal(req, res, next){
+app.post('/parseData', function isReal(req, res, next){
     logger.info('Draw graph');
     res.json({});
 });

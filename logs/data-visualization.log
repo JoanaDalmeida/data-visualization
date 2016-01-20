@@ -1,11 +1,14 @@
-2016/01/20 17:05:49 - info: Data visualization Web app start at   8888
-2016/01/20 17:44:35 - info: Data visualization Web app start at   8888
-2016/01/20 17:45:52 - info: Data visualization Web app start at   8888
-2016/01/20 17:48:00 - info: Data visualization Web app start at   8888
-2016/01/20 17:53:35 - info: Data visualization Web app start at   8888
-2016/01/20 17:53:54 - info: Draw graph
-2016/01/20 18:00:42 - info: Data visualization Web app start at   8888
-2016/01/20 18:01:28 - info: Data visualization Web app start at   8888
-2016/01/20 18:02:07 - info: Data visualization Web app start at   8888
-2016/01/20 18:03:26 - info: Data visualization Web app start at   8888
-2016/01/20 18:12:05 - info: Data visualization Web app start at   8888
+2016/01/20 18:25:07 - info: Data visualization Web app start at   8888
+2016/01/20 18:26:49 - info: Data visualization Web app start at   8888
+2016/01/20 18:30:23 - error: uncaughtException: path is not defined date=Wed Jan 20 2016 18:30:23 GMT+0100 (Paris, Madrid), pid=31972, uid=null, gid=null, cwd=d:\projets_github\data-visualization, execPath=c:\Program Files\nodejs\node.exe, version=v4.2.1, argv=[c:\Program Files\nodejs\node.exe, d:\projets_github\data-visualization\index.js], rss=31764480, heapTotal=19582720, heapUsed=13046504, loadavg=[0, 0, 0], uptime=107641.605958, trace=[column=24, file=d:\projets_github\data-visualization\index.js, function=, line=15, method=null, native=false, column=26, file=module.js, function=Module._compile, line=435, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=442, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=311, method=Module._load, native=false, column=10, file=module.js, function=Function.Module.runMain, line=467, method=Module.runMain, native=false, column=18, file=node.js, function=startup, line=134, method=null, native=false, column=3, file=node.js, function=null, line=961, method=null, native=false], stack=[ReferenceError: path is not defined,     at Object.<anonymous> (d:\projets_github\data-visualization\index.js:15:24),     at Module._compile (module.js:435:26),     at Object.Module._extensions..js (module.js:442:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:311:12),     at Function.Module.runMain (module.js:467:10),     at startup (node.js:134:18),     at node.js:961:3]
+2016/01/20 18:30:33 - error: uncaughtException: path is not defined date=Wed Jan 20 2016 18:30:33 GMT+0100 (Paris, Madrid), pid=26992, uid=null, gid=null, cwd=d:\projets_github\data-visualization, execPath=c:\Program Files\nodejs\node.exe, version=v4.2.1, argv=[c:\Program Files\nodejs\node.exe, d:\projets_github\data-visualization\index.js], rss=32104448, heapTotal=19582720, heapUsed=13032768, loadavg=[0, 0, 0], uptime=107651.516949, trace=[column=24, file=d:\projets_github\data-visualization\index.js, function=, line=15, method=null, native=false, column=26, file=module.js, function=Module._compile, line=435, method=_compile, native=false, column=10, file=module.js, function=Object.Module._extensions..js, line=442, method=Module._extensions..js, native=false, column=32, file=module.js, function=Module.load, line=356, method=load, native=false, column=12, file=module.js, function=Function.Module._load, line=311, method=Module._load, native=false, column=10, file=module.js, function=Function.Module.runMain, line=467, method=Module.runMain, native=false, column=18, file=node.js, function=startup, line=134, method=null, native=false, column=3, file=node.js, function=null, line=961, method=null, native=false], stack=[ReferenceError: path is not defined,     at Object.<anonymous> (d:\projets_github\data-visualization\index.js:15:24),     at Module._compile (module.js:435:26),     at Object.Module._extensions..js (module.js:442:10),     at Module.load (module.js:356:32),     at Function.Module._load (module.js:311:12),     at Function.Module.runMain (module.js:467:10),     at startup (node.js:134:18),     at node.js:961:3]
+2016/01/20 18:30:49 - info: Data visualization Web app start at   8888
+2016/01/20 18:31:24 - info: Data visualization Web app start at   8888
+2016/01/20 18:57:24 - info: Data visualization Web app start at   8888
+2016/01/20 18:58:37 - info: Data visualization Web app start at   8888
+2016/01/20 18:59:13 - info: Data visualization Web app start at   8888
+2016/01/20 19:00:58 - info: Data visualization Web app start at   8888
+2016/01/20 19:06:48 - info: Data visualization Web app start at   8888
+2016/01/20 19:07:27 - info: Data visualization Web app start at   8888
+2016/01/20 19:07:34 - info: Draw graph
+2016/01/20 19:10:22 - info: Data visualization Web app start at   8888
