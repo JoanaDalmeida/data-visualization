@@ -1,0 +1,10 @@
+{
+  "port": 8888,
+  "log": {
+      "level": "debug"
+  },
+  "mode": "dev",
+  "options": {
+    "cors": true
+  }
+}
