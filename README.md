@@ -1,6 +1,6 @@
 # data-visualization
 
-Tool used to display a visual representation of your json data.
+Tool used to display a visual representation of your JSON data.
 
 # Prerequisite
 
@@ -11,8 +11,19 @@ The following software is prerequisite to use this tool:
 
 # Usage
 
-* Launch the program, via the start.sh script, the apps listens by default on the port 8888. 
-You can change the port number via the config file.
+* Launch the program, via the start.sh script or by using npm start command. 
+  From the project directory(data-visualization) run the command below 
+  
+  ```shell
+  . ./start.sh
+  ```
+  Or 
+  ```shell
+  npm start
+  ```
+  
+  The app listens by default on the port 8888. You can change the port number via the config file.
+
 
 * Paste your data in the textarea and then submit it.
 
@@ -32,6 +43,15 @@ You can change the port number via the config file.
 ```
 
 The JSON schema can be modified via the config.json file.
+
+# Tests
+
+There are some tests for the Json validation function. (folder: test)
+To run tests, use the command below :
+
+  ```shell
+  npm test
+  ```
 
 # See it in action
 
