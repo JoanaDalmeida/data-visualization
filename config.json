@@ -6,5 +6,14 @@
   "mode": "dev",
   "options": {
     "cors": true
-  }
+  },
+  "expenseSchema": {
+  	"type": "object",
+    "properties": {
+      "type": {"type": "string"},
+      "value": {"type": "number", "minimum": 0},
+      "date": {"type": "date"}
+    },
+    "required": ["type", "value", "date"]
+   }
 }
