@@ -1,14 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  div.hub-activator(data-hub-activator)
+  h1.title= title
+  div.json-validator
+    div.json-sample
+      span(onClick='addSampleJson()') Sample JSON
+    form(action='/parseData', method='post')
+      div(data-role='fieldcontain')
+        fieldset(data-role='controlgroup')
+          label(for='data') JSON data :
+          textarea(id='json-data', placeholder='Paste JSON data here', name='data')
+       div.submit
+        input(type='submit',value='Submit Json Data')
     div
-     form(action='/parseData', method='post')
-       div(data-role='fieldcontain')
-         fieldset(data-role='controlgroup')
-           label(for='data') Upload your JSON data
-              textarea(id='data', placeholder='data',name='data')
-       div(data-role='fieldcontain')
-         input(type='submit',value='Submit Json Data', data-transition='fade', data-theme='c')
+      if jsonValidationErrors
+        div.errors JSON Data is not valid

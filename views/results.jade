@@ -1,0 +1,71 @@
+extends layout
+
+block content
+	h1.title= title
+	div.restart.right
+		a(href='/') Restart
+	div.results-title Below expenses :  
+	div
+		div.results-table
+			table(id='expenses-table')
+				thead
+					tr.no-sort
+						th Type
+						th Value
+						th Date
+				tbody
+					each expense in expenses
+						tr(data-type=expense.type)
+							td= expense.type
+							td= expense.value
+							td= expense.date
+		div.chart
+			div.pie-chart-title Expenses Pie Chart
+			div(id='chart')
+	div.restart.bottom
+		a(href='/') Restart
+
+	script(type='text/javascript').
+		new Tablesort(document.getElementById('expenses-table'))
+
+	script(type='text/javascript').
+		var width = 300;
+		var height = 300;
+		var radius = Math.min(width, height) / 2;
+		var color = d3.scale.category20b();
+
+		var svg = d3.select('#chart')
+		.append('svg')
+		.attr('width', width)
+		.attr('height', height)
+		.append('g')
+		.attr('transform', 'translate(' + (width / 2) +  ',' + (height / 2) + ')');
+
+		var arc = d3.svg.arc()
+		.outerRadius(radius);
+
+		var pie = d3.layout.pie()
+		.value(function(expense) { return expense.value; }).sort(null);
+
+		var data =!{JSON.stringify(expenses)}
+
+		var g = svg.selectAll('path')
+		.data(pie(data))
+		.enter();
+
+		g.append('path')
+		.attr('d', arc)
+		.attr('fill', function(expense, i) { 
+			return color(expense.data.type);
+		});
+
+		var labelArc = d3.svg.arc()
+		.outerRadius(radius - 40)
+		.innerRadius(radius - 40);
+
+		g.append("text")
+		.attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
+		.attr("dy", ".35em")
+		.text(function(expense) { return expense.data.type; })
+		.on('click', highlightExpenses);
+
