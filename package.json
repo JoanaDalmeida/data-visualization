@@ -4,7 +4,7 @@
   "description": "Data visualization",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "./node_modules/.bin/mocha -w",
     "start": "node index.js &"
   },
   "keywords": [
