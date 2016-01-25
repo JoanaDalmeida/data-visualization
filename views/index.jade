@@ -9,8 +9,8 @@ block content
       div(data-role='fieldcontain')
         fieldset(data-role='controlgroup')
           label(for='data') JSON data :
-          textarea(id='json-data', placeholder='Paste JSON data here', name='data')
-       div.submit
+          textarea(id='json-data', placeholder='Paste JSON data here', name='data')= value
+      div.submit
         input(type='submit',value='Submit Json Data')
     div
       if jsonValidationErrors

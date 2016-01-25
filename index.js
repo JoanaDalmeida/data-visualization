@@ -38,11 +38,13 @@ app.post('/parseData', function parseData(req, res, next){
 	if(true === response.isValid) {	
     	res.render('results.jade', {
 	      title: 'Data visualization',
+	      value: '',
 	      expenses: JSON.parse(data).expenses
 	    });
 	} else {
 		res.render('index.jade', {
 	      title: 'Data visualization',
+	      value: data,
 	      jsonValidationErrors: response.errors
 	    });
 	}
