@@ -45,27 +45,39 @@ block content
 		.outerRadius(radius);
 
 		var pie = d3.layout.pie()
-		.value(function(expense) { return expense.value; }).sort(null);
+		.value(function(obj) { 
+			var value = 0;
+			for(var j = 0; j < obj.values.length; j++) {
+				value += obj.values[j].value;
+			}
+			return value; 
+		}).sort(null);
 
 		var data =!{JSON.stringify(expenses)}
 
+		var expensesByType = d3.nest()
+		.key(function(expense) { return expense.type; })
+		.entries(data);
+
 		var g = svg.selectAll('path')
-		.data(pie(data))
+		.data(pie(expensesByType))
 		.enter();
 
 		g.append('path')
 		.attr('d', arc)
 		.attr('fill', function(expense, i) { 
-			return color(expense.data.type);
-		});
+			return color(expense.data.key);
+		})
+		.on('click', highlightExpenses);
 
 		var labelArc = d3.svg.arc()
 		.outerRadius(radius - 40)
 		.innerRadius(radius - 40);
 
+		//add legend
 		g.append("text")
 		.attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
 		.attr("dy", ".35em")
-		.text(function(expense) { return expense.data.type; })
+		.text(function(expense) { return expense.data.key; })
 		.on('click', highlightExpenses);
 

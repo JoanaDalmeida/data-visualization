@@ -143,6 +143,7 @@ table th.sort-up:after {
     color: #5C7129;
 }
 
+svg g path,
 svg g text {
     cursor: pointer;
 }

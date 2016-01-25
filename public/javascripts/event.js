@@ -11,7 +11,17 @@ var sampleJson = '{' + '\n' +
 '         "date":"12/04/2014"' + '\n' +
 '      },'+ '\n' + 
 '      {'+ '\n' +
+'         "type":"type1",' + '\n' + 
+'         "value":6,'+ '\n' + 
+'         "date":"12/04/2014"' + '\n' +
+'      },'+ '\n' + 
+'      {'+ '\n' +
 '         "type":"type3",' + '\n' + 
+'         "value":3,'+ '\n' + 
+'         "date":"12/04/2014"' + '\n' +
+'      },'+ '\n' + 
+'      {'+ '\n' +
+'         "type":"type4",' + '\n' + 
 '         "value":10,'+ '\n' + 
 '         "date":"12/04/2015"' + '\n' +
 '      }'+ '\n' + 
@@ -26,6 +36,6 @@ function highlightExpenses(event){
   	//remove the class from all tr 
 	$('tbody tr').removeClass('highlight');
 	//highlight expenses matching the selected type
-	$('tbody tr[data-type="'+ event.data.type +'"]').addClass('highlight')
+	$('tbody tr[data-type="'+ event.data.key +'"]').addClass('highlight')
 }
 
