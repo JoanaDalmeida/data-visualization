@@ -33,3 +33,7 @@ You can change the port number via the config file.
 
 The JSON schema can be modified via the config.json file.
 
+# See it in action
+
+[ See it in action](usage.gif)
+
