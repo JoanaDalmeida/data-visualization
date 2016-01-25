@@ -13,10 +13,16 @@ var sampleJson = '{ "expenses" : [' +
 		'{ "type":"type2" , "value":3, "date":"12/04/2015" },' +
 		'{ "type":"type3" , "value":6, "date":"12/04/2015" } ]}';
 
+/**
+return  sample.
+*/
 function getSampleJson() {
 	return sampleJson;
 }
 
+/**
+Check if the json is valid.
+*/
 function isValid(jsonToParse) {
 	var response = {
 		isValid: true,
@@ -56,6 +62,9 @@ function isValid(jsonToParse) {
 	return response;
 }
 
+/**
+sort expenses by date.
+*/
 function getSortedExpenses(jsonData) {
 	var expenses = JSON.parse(jsonData).expenses;
 	for(var i=0; i < expenses.length; i++) {
