@@ -39,7 +39,7 @@ app.post('/parseData', function parseData(req, res, next){
     	res.render('results.jade', {
 	      title: 'Data visualization',
 	      value: '',
-	      expenses: JSON.parse(data).expenses
+	      expenses: validator.getSortedExpenses(data)
 	    });
 	} else {
 		res.render('index.jade', {

@@ -3,6 +3,8 @@ var v = new Validator();
 
 var logger = require('../logger');
 
+var moment = require('moment');
+
 //Config file
 config = require('../config');
 
@@ -54,7 +56,20 @@ function isValid(jsonToParse) {
 	return response;
 }
 
+function getSortedExpenses(jsonData) {
+	var expenses = JSON.parse(jsonData).expenses;
+	for(var i=0; i < expenses.length; i++) {
+		var date = new Date(expenses[i].date);
+		expenses[i].date = moment(date).format('DD MMM YYYY');
+	}
+	expenses.sort(function(a, b){
+		return a.date-b.date //sort by date ascending
+	});
+	return expenses;
+}
+
 module.exports = {
 	getSampleJson: getSampleJson,
-	isValid: isValid
+	isValid: isValid,
+	getSortedExpenses: getSortedExpenses
 }
