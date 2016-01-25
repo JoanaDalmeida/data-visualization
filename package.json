@@ -8,7 +8,11 @@
     "start": "node index.js &"
   },
   "keywords": [
-    "node"
+    "node",
+    "d3",
+    "jade",
+    "jsonschema",
+    "tablesort"
   ],
   "repository": {
     "type": "git",
